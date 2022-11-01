@@ -85,7 +85,7 @@ public class TextController {
                 instagram.setup();
                 try {
                     instagram.login();
-                    InstagramSearchUsernameResult instagramSearchUsernameResult = instagram.sendRequest(new InstagramSearchUsernameRequest("space_nazarov"));
+                    InstagramSearchUsernameResult instagramSearchUsernameResult = instagram.sendRequest(new InstagramSearchUsernameRequest("profilebot_uz"));
                     System.out.println(instagramSearchUsernameResult.getStatus());
                     DeleteMessage deleteMessage = new DeleteMessage();
                     deleteMessage.setChatId(message.getChatId());
