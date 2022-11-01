@@ -92,8 +92,9 @@ public class TextController {
                     deleteMessage.setMessageId(message1.getMessageId());
                     bot.delete(deleteMessage);
                     if (instagramSearchUsernameResult.getStatus().equals("ok")) {
-                        buttons.menuAfterLog(message.getChatId());
                         Instagram.accounts.put(message.getChatId(), instagram);
+                        buttons.menuAfterLog(message.getChatId());
+                        
                     } else {
                         sendMessage.setParseMode(ParseMode.MARKDOWN);
                         sendMessage.setText("*" + buttons.setText("Login yoki parol xato", "неверный логин или пароль", "Incorrect login or password", lang) + "!*");
